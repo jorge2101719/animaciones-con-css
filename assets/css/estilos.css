@@ -1,0 +1,458 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* se declaran cuatro (4) secciones: nav, header, main y footer */
+/* se cumple con el punto 4 del desafío */
+nav {
+    grid-area: nav;
+    background-color: mediumblue;
+    color: white;
+    display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    z-index: 0; /* se hizo necesario para que la imagen no se superpusiera en las secciones colindantes */
+}
+
+header {
+    padding: 1%;
+    grid-area: header;
+    background-color: lightblue;
+    display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    grid-area: main;
+    display: flex; /* uso de flex a sugerencia del punto 3 de la documentación */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    border: solid 1px gray;
+    background-color: white; /* necesario para que la imagen del navegador no se superponga */
+}
+
+footer {
+    grid-area: pie;
+    background-color: midnightblue;
+    color: white;
+    display: flex; /* uso de flex: punto 3 de la documentación */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+
+main, header {
+    z-index: 1;
+}
+
+
+/* definiciones básicas para la visión mobile */
+.nav-titulo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 25%; */
+    /* height: 4%; */
+    /* background-image: url("/assets/img/1299198.svg"); */
+    /* background-size: cover; */
+    /* background-color: red; */
+    /* animation: mover 3s ease infinite alternate; */
+    /* animation: miAnimacionSvg 2s ease 3 alternate; */
+}
+
+.nav-titulo img {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: miAnimacionSvg 6s ease 3 alternate;
+}
+
+/* animación al logo */
+@keyframes miAnimacionSvg {
+    0% {
+        /* background-color: white; */
+        transform: translateX(0);
+        /* filter: url("https://svgsilh.com/svg/1299198.svg"); */
+        color: white;
+       }
+    25% {
+        /* background-color: black; */
+        transform: translateX(25%);
+        color: black;
+    }
+    50% {
+        transform: translateX(0) scale(1.5);
+    }
+    75% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.nav-menu {
+    display: none;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* cambio de imagen del navegador por una svg */
+nav img {
+    width: 20%;
+    margin-right: 10px;
+    color: white;
+    fill: aliceblue;
+}
+
+
+/* elementos del header */
+header select {
+    width: 90%;
+    padding: 1%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
+
+/* elementos de main */
+/* definición de cards */
+.cards {
+    display: grid;
+    gap: 10px;
+    padding: 5%;
+}
+
+/* definición de cada card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1%;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 1%;
+    padding-bottom: 10%;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.card:hover {
+    animation: sobreCard 2s ease infinite alternate;
+}
+
+@keyframes sobreCard {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: cyan;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    /* se agregar filtro para visión de grises */
+    filter: grayscale(100%);
+}
+
+/* se anula el filter para ver colores al pasar el ratón sobre la imagen */
+.card img:hover {
+    filter: none;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* se define card-bis y card-bis-special luego de todo lo anterior, para que funcione */
+.card-bis, .card-bis-special {
+    display: none;
+}
+
+main button {
+    background-color: royalblue;
+    border: 0;
+    color: white;
+    padding: 1%;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 3%;
+    filter: grayscale();
+}
+
+main button:hover {
+    filter: none;
+}
+
+.lista-numeros {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.lista-numeros li {
+    border: solid 1px gray;
+    padding: 15%;
+    color: blue;
+    font-size: 1.2rem;
+}
+
+/* elementos del footer */
+.iconos-pie i {
+    padding: 0 5px;
+}
+
+footer p {
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* se declaran las grid areas de la vista mobile: punto 2 de la documentación */
+.grid-container {
+    min-height: 100vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 10fr 1fr; */
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "pie";
+}
+
+
+/* Modificaciones al layout: punto 1 de la documentación del desafío */
+
+/* modelo Tablet: desarrollo opcional (no calificado) */
+
+@media (min-width: 576px) {
+    /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
+    .mobile {
+        display: none;
+    }
+
+    /* se redefinen los elementos del navegador */
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* en este caso se hace necesario para visualizar el menú */
+    .nav-menu {
+        display: contents;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 1rem; /* necesario para dar mejor efecto de alineación horizontal */
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 1.2rem;
+        margin-right: 20px;
+    }
+
+    .nav-titulo img {
+        width: 20%;
+    }
+
+    /* modicaciones a header */
+    header {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+    /* redefiniciones de cards y sus elementos para que muestre dos columnas */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1%; /* modifica padding en lo sucesivo */
+    }
+    
+    /* redefinición de los elementos de las cards */
+    /* copia de los estilos anteriores */
+    /* el quiebre hace visible el elemento con clase card-bis-special */
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+        border: solid 1px gray;
+        border-radius: 5px;
+        padding: 1%;
+        padding-bottom: 10%;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    /* se anula la visión de las tarjetas con clase card-bis */
+    /* esto es necesrio, pues el quiebre anula la instrucción dada anteriormente*/
+    .card-bis {
+        display: none;
+    }
+
+    
+    /* modificaciones al footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* grid areas: punto 2 de la documentación */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        /* grid-template-rows: 1fr 3fr 1fr; */
+        grid-template-areas: 
+        "nav nav"
+        "header main"
+        "pie pie";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------ */
+/* modificaciones con media queries: punto 1 de la documentación */
+/* se modifico el valor de 576 a 992 porque se ha incluido la definición para Tablet */
+
+@media (min-width: 992px) {
+    /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
+    .mobile {
+        display: none;
+    }
+
+    /* se redefinen los elementos del navegador */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .nav-titulo img {
+        width: 20%;
+    }
+
+    /* necesario para visualizar menú */
+    .nav-menu {
+        display: contents;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        margin: 0;
+        margin-bottom: 1.2rem;
+    }
+
+    /* redefiniciones de cards y sus elementos, para que muestre cuatro columnas */
+    /* el quiebre anula, por defecto, las instrucciones de invisibilidad de card-bis y card-bis-special */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* redefinición de los elementos de las cards */
+    /* en este caso se debe primero visibilizarlas/*
+    /* y luego volver a incluir los estilos definidos anteriormente */
+    /* copia de los estilos anteriores */
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+        border: solid 1px gray;
+        border-radius: 5px;
+        padding: 1%;
+        padding-bottom: 10%;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .card p {
+        font-size: 1.2rem;
+    }
+    
+    
+    
+    /* modificaciones al footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* grid areas: punto 2 de la documentación */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 9fr;
+        grid-template-areas: 
+        "nav header"
+        "nav main"
+        "pie main";
+    }
+}
