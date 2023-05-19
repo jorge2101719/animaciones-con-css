@@ -39,6 +39,15 @@ main {
     background-color: white; /* necesario para que la imagen del navegador no se superponga */
 }
 
+.contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
 footer {
     grid-area: pie;
     background-color: midnightblue;
@@ -153,7 +162,10 @@ header select {
 }
 
 .card:hover {
-    animation: sobreCard 2s ease infinite alternate;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    transform: rotate3d(0,1,0,360deg);
+    transition: transform 4s;
+    animation: sobreCard 4s ease infinite alternate;
 }
 
 @keyframes sobreCard {
@@ -165,6 +177,7 @@ header select {
         background-color: cyan;
     }
 }
+
 
 .card img {
     width: 100%;
@@ -240,6 +253,7 @@ footer p {
     "nav"
     "header"
     "main"
+    "contacto"
     "pie";
 }
 
@@ -347,6 +361,7 @@ footer p {
         grid-template-areas: 
         "nav nav"
         "header main"
+        "header contacto"
         "pie pie";
     }
 }
@@ -453,6 +468,7 @@ footer p {
         grid-template-areas: 
         "nav header"
         "nav main"
-        "pie main";
+        "nav contacto"
+        "pie pie";
     }
 }
