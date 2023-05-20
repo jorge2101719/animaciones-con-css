@@ -42,7 +42,7 @@ main {
 .catalogo {
     grid-area: catalogo;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1%;
@@ -242,6 +242,18 @@ main button:hover {
     padding: 15%;
     color: blue;
     font-size: 1.2rem;
+}
+
+
+/* elementos del Catalogo */
+.catalogo div img {
+    width: 15rem;
+}
+
+#modelo1, #modelo2, #modelo3, #modelo4, #modelo5, #modelo6, #modelo7, #modelo8 {
+    display: flex;
+    gap: 1rem;
+    padding: 1%;
 }
 
 
