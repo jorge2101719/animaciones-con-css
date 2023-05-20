@@ -112,7 +112,7 @@ main, header {
     /* animation: miAnimacionSvg 2s ease 3 alternate; */
 }
 
-.nav-titulo svg {
+.nav-titulo object {
     width: 20%;
     height: 30%;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
