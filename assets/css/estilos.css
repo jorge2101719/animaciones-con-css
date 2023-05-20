@@ -112,7 +112,9 @@ main, header {
     /* animation: miAnimacionSvg 2s ease 3 alternate; */
 }
 
-.nav-titulo img {
+.nav-titulo svg {
+    width: 20%;
+    height: 30%;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: miAnimacionSvg 6s ease 3 alternate;
 }
@@ -149,14 +151,6 @@ main, header {
 .nav-menu a {
     text-decoration: none;
     color: white;
-}
-
-/* cambio de imagen del navegador por una svg */
-nav img {
-    width: 20%;
-    margin-right: 10px;
-    color: white;
-    fill: aliceblue;
 }
 
 
