@@ -28,7 +28,7 @@
                     <li><a href="#">Inicio</a></li>
                     <li><a href="catalogo">Catálogo</a></li>
                     <li><a href="ofertas">Ofertas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
                 </ul>
             </div>
             <!-- se incluye la clase mobile para invisibilizar con estilo escritorio -->
@@ -143,12 +143,21 @@
             </div>
         </main>
 
-
-        <div id="contacto">
-            Contenido contacto
+        <div id="catalogo">
+            Aquí ponemos el catálogo
         </div>
 
-        <footer>
+        <form id="formulario">
+            <h2>Contáctese con nosotros</h2>
+            <label for="nombre">Ingrese su nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre completo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="correo" placeholder="Correo electrónico" >
+            <button type="button">Enviar</button>
+        </form>
+
+
+        <footer id="pie">
             <div class="iconos-pie">
                 <i class="fa-brands fa-facebook fa-2x"></i>
                 <i class="fa-brands fa-square-instagram fa-2x"></i>

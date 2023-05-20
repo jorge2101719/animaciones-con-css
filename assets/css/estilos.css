@@ -39,13 +39,27 @@ main {
     background-color: white; /* necesario para que la imagen del navegador no se superponga */
 }
 
-.contacto {
-    grid-area: contacto;
+.catalogo {
+    grid-area: catalogo;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 1%;
+}
+
+
+form {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    gap: 1rem;
+    background-color: royalblue;
+    color: white;
+    /* border: solid 1px green; */
 }
 
 footer {
@@ -107,7 +121,6 @@ main, header {
         transform: translateX(0);
     }
 }
-
 
 .nav-menu {
     display: none;
@@ -231,6 +244,29 @@ main button:hover {
     font-size: 1.2rem;
 }
 
+
+
+/* elementos de form */
+form input {
+    width: 80%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+
+form button {
+    width: 5rem;
+    height: 2rem;
+    border: 0;
+    background-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+
+}
+
 /* elementos del footer */
 .iconos-pie i {
     padding: 0 5px;
@@ -253,6 +289,7 @@ footer p {
     "nav"
     "header"
     "main"
+    "catalogo"
     "contacto"
     "pie";
 }
@@ -361,6 +398,7 @@ footer p {
         grid-template-areas: 
         "nav nav"
         "header main"
+        "header catalogo"
         "header contacto"
         "pie pie";
     }
@@ -453,7 +491,6 @@ footer p {
     }
     
     
-    
     /* modificaciones al footer */
     footer {
         display: flex;
@@ -468,6 +505,7 @@ footer p {
         grid-template-areas: 
         "nav header"
         "nav main"
+        "nav catalogo"
         "nav contacto"
         "pie pie";
     }
