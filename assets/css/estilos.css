@@ -41,12 +41,31 @@ main {
 
 .catalogo {
     grid-area: catalogo;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-items: center;
     padding: 1%;
+    /* background-color: yellow; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
+
+.catalogo:hover {
+    animation: colorCatalogo 2s ease alternate;
+}
+
+@keyframes colorCatalogo {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+
+
 
 
 form {
@@ -247,7 +266,14 @@ main button:hover {
 
 /* elementos del Catalogo */
 .catalogo div img {
-    width: 15rem;
+    width: 50%;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.catalogo div p {
+    text-align: justify;
+    width: 60%;
 }
 
 #modelo1, #modelo2, #modelo3, #modelo4, #modelo5, #modelo6, #modelo7, #modelo8 {
@@ -307,8 +333,10 @@ footer p {
 }
 
 
-/* Modificaciones al layout: punto 1 de la documentación del desafío */
 
+
+
+/* Modificaciones al layout: punto 1 de la documentación del desafío */
 /* modelo Tablet: desarrollo opcional (no calificado) */
 
 @media (min-width: 576px) {
@@ -394,7 +422,6 @@ footer p {
         display: none;
     }
 
-    
     /* modificaciones al footer */
     footer {
         display: flex;
@@ -500,6 +527,17 @@ footer p {
     
     .card p {
         font-size: 1.2rem;
+    }
+
+    /* modificaciones a Catalogo */
+    .catalogo .modelos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 1%;
+        padding: 1%;
+        margin: 1%;
     }
     
     
