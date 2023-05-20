@@ -12,7 +12,7 @@ nav {
     background-color: mediumblue;
     color: white;
     display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 2%;
     z-index: 0; /* se hizo necesario para que la imagen no se superpusiera en las secciones colindantes */
@@ -65,9 +65,6 @@ main {
 }
 
 
-
-
-
 form {
     grid-area: contacto;
     display: flex;
@@ -112,12 +109,14 @@ main, header {
     /* animation: miAnimacionSvg 2s ease 3 alternate; */
 }
 
-.nav-titulo object {
-    width: 20%;
-    height: 30%;
+.nav-titulo svg, .nav-titulo svg path {
+    width: 35%;
+    height: 35%;
+    fill: white;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: miAnimacionSvg 6s ease 3 alternate;
 }
+
 
 /* animación al logo */
 @keyframes miAnimacionSvg {
@@ -125,21 +124,26 @@ main, header {
         /* background-color: white; */
         transform: translateX(0);
         /* filter: url("https://svgsilh.com/svg/1299198.svg"); */
-        color: white;
+        fill: #fff;
        }
     25% {
         /* background-color: black; */
         transform: translateX(25%);
-        color: black;
+        fill: violet;
     }
     50% {
-        transform: translateX(0) scale(1.5);
+        width: 40%;
+        height: 40%;
+        transform: translateX(0) scale(1.2);
+        fill: #69e521;
     }
     75% {
         transform: translateX(-25%);
+        fill: yellow;
     }
     100% {
         transform: translateX(0);
+        fill: red;
     }
 }
 
