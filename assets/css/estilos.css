@@ -125,17 +125,15 @@ main, header {
         fill: #fff;
        }
     25% {
-        transform: translateX(10%);
+        transform: translateX(20%);
         fill: violet;
     }
     50% {
-        width: 40%;
-        height: 45%;
         transform: translateX(0);
         fill: #69e521;
     }
     75% {
-        transform: translateX(-10%) ;
+        transform: translateX(-20%) ;
         fill: yellow;
     }
     100% {
@@ -243,6 +241,11 @@ main button {
 
 main button:hover {
     filter: none;
+}
+
+main button a {
+    text-decoration: none;
+    color: white;
 }
 
 .lista-numeros {
@@ -366,8 +369,8 @@ footer p {
         margin-right: 20px;
     }
 
-    .nav-titulo img {
-        width: 20%;
+    .nav-titulo svg {
+        width: 15%;
     }
 
     /* modicaciones a header */
@@ -466,7 +469,7 @@ footer p {
         gap: 40px;
     }
 
-    .nav-titulo img {
+    .nav-titulo svg {
         width: 20%;
     }
 
