@@ -10,7 +10,7 @@ body {
 nav {
     grid-area: nav;
     /* background-color: mediumblue; */
-    background-color: green;
+    background-color: #012cef;
     color: white;
     display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
     justify-content: space-around;
@@ -23,7 +23,7 @@ header {
     padding: 1%;
     grid-area: header;
     /* background-color: lightblue; */
-    background-color: lightgreen;
+    background-color: #027af9;
     display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
     justify-content: center;
     align-items: center;
@@ -577,14 +577,16 @@ footer a{
     }
 
     /* modificaciones a Catalogo */
+    .catalogo {
+        margin: 1%;
+        padding: 5%;
+    }
     .catalogo .modelos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
         gap: 1%;
-        padding: 1%;
-        margin: 1%;
     }
     
     
