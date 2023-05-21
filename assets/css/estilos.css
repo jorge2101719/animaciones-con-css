@@ -304,7 +304,7 @@ form button {
     width: 5rem;
     height: 2rem;
     border: 0;
-    background-color: lightgreen;
+    background-color: mediumseagreen;
     border-radius: 5px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -322,6 +322,11 @@ footer p {
     font-size: 1.4rem;
     font-weight: 900;
     text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
 }
 
 /* se declaran las grid areas de la vista mobile: punto 2 de la documentación */
