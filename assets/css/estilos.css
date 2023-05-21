@@ -213,6 +213,13 @@ header select {
     display: none;
 }
 
+main h2 {
+    font-size: xx-large;
+    font-family: 'Satisfy';
+    /* background-color: yellow; */
+    /* width: 100%; */
+}
+
 main button {
     background-color: royalblue;
     border: 0;
@@ -276,6 +283,11 @@ main button a {
     display: flex;
     gap: 1rem;
     padding: 1%;
+}
+
+.catalogo h2 {
+    font-family: 'Satisfy';
+    font-size: xx-large;
 }
 
 
