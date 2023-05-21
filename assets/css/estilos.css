@@ -121,24 +121,21 @@ main, header {
 /* animación al logo */
 @keyframes miAnimacionSvg {
     0% {
-        /* background-color: white; */
         transform: translateX(0);
-        /* filter: url("https://svgsilh.com/svg/1299198.svg"); */
         fill: #fff;
        }
     25% {
-        /* background-color: black; */
-        transform: translateX(25%);
+        transform: translateX(10%);
         fill: violet;
     }
     50% {
         width: 40%;
-        height: 40%;
-        transform: translateX(0) scale(1.2);
+        height: 45%;
+        transform: translateX(0);
         fill: #69e521;
     }
     75% {
-        transform: translateX(-25%);
+        transform: translateX(-10%) ;
         fill: yellow;
     }
     100% {
@@ -194,7 +191,7 @@ header select {
 .card:hover {
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     transform: rotate3d(0,1,0,360deg);
-    transition: transform 4s;
+    transition: transform 6s;
     animation: sobreCard 4s ease infinite alternate;
 }
 
