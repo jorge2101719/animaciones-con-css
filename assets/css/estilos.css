@@ -9,7 +9,8 @@ body {
 /* se cumple con el punto 4 del desafío */
 nav {
     grid-area: nav;
-    background-color: mediumblue;
+    /* background-color: mediumblue; */
+    background-color: green;
     color: white;
     display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
     justify-content: space-around;
@@ -21,7 +22,8 @@ nav {
 header {
     padding: 1%;
     grid-area: header;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-color: lightgreen;
     display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
     justify-content: center;
     align-items: center;
@@ -119,7 +121,7 @@ main, header {
         fill: #69e521;
     }
     75% {
-        transform: translateX(-20%) ;
+        transform: translateX(-20%);
         fill: yellow;
     }
     100% {
@@ -180,12 +182,24 @@ header select {
 }
 
 @keyframes sobreCard {
-    from {
+    0% {
         background-color: white;
     }
 
-    to {
-        background-color: cyan;
+    25% {
+        background-color: yellowgreen;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    75% {
+        background-color: yellowgreen;
+    }
+
+    100% {
+        background-color: white;
     }
 }
 
@@ -257,22 +271,42 @@ main button a {
 
 /* elementos del Catalogo */
 .catalogo:hover {
-    animation: colorCatalogo 2s ease alternate;
+    animation: colorCatalogo 4s ease alternate;
 }
 
 @keyframes colorCatalogo {
-    from {
+    0% {
         background-color: white;
     }
-    to {
+
+    25% {
+        background-color: yellowgreen;
+    }
+
+    50% {
         background-color: yellow;
     }
+
+    75% {
+        background-color: yellowgreen;
+    }
+
+    100% {
+        background-color: white;
+    }
 }
+
 .catalogo div img {
     width: 50%;
     border-radius: 5px;
-    border: solid 1px black;
 }
+
+.catalogo div img:hover {
+    border: solid 1px blue;
+    transform: scale(1.05);
+    transition: transform 1s ease;
+}
+
 
 .catalogo div p {
     text-align: justify;
