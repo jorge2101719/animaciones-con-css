@@ -51,20 +51,6 @@ main {
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
-.catalogo:hover {
-    animation: colorCatalogo 2s ease alternate;
-}
-
-@keyframes colorCatalogo {
-    from {
-        background-color: white;
-    }
-    to {
-        background-color: yellow;
-    }
-}
-
-
 form {
     grid-area: contacto;
     display: flex;
@@ -263,6 +249,18 @@ main button a {
 
 
 /* elementos del Catalogo */
+.catalogo:hover {
+    animation: colorCatalogo 2s ease alternate;
+}
+
+@keyframes colorCatalogo {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: yellow;
+    }
+}
 .catalogo div img {
     width: 50%;
     border-radius: 5px;
@@ -294,7 +292,7 @@ form button {
     width: 5rem;
     height: 2rem;
     border: 0;
-    background-color: royalblue;
+    background-color: lightgreen;
     border-radius: 5px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
