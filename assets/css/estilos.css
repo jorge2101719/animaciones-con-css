@@ -581,6 +581,7 @@ footer a{
         margin: 0;
         padding: 5%;
     }
+
     .catalogo .modelos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
