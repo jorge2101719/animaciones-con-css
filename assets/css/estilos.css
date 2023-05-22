@@ -578,7 +578,7 @@ footer a{
 
     /* modificaciones a Catalogo */
     .catalogo {
-        margin: 1%;
+        margin: 0;
         padding: 5%;
     }
     .catalogo .modelos {
