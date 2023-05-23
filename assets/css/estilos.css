@@ -5,14 +5,13 @@ body {
 }
 
 
-/* se declaran cuatro (4) secciones: nav, header, main y footer */
-/* se cumple con el punto 4 del desafío */
+/* se hace uso de la estructura del anterior desafío para facilitar el trabajo */
 nav {
     grid-area: nav;
     /* background-color: mediumblue; */
     background-color: #012cef;
     color: white;
-    display: flex; /* uso de flex a sugerencia de la documentación: punto 3 */
+    display: flex; /* uso de flex a sugerencia de la documentación */
     justify-content: space-around;
     align-items: center;
     padding: 2%;
@@ -24,7 +23,7 @@ header {
     grid-area: header;
     /* background-color: lightblue; */
     background-color: #027af9;
-    display: flex; /* uso de flex para cumplir con el punto 3 de la documentación */
+    display: flex; /* uso de flex para cumplir con la documentación */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -32,7 +31,7 @@ header {
 
 main {
     grid-area: main;
-    display: flex; /* uso de flex a sugerencia del punto 3 de la documentación */
+    display: flex; /* uso de flex a sugerencia de la documentación */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -73,7 +72,7 @@ footer {
     grid-area: pie;
     background-color: midnightblue;
     color: white;
-    display: flex; /* uso de flex: punto 3 de la documentación */
+    display: flex; /* uso de flex: para cumplir con la documentación */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -91,13 +90,6 @@ main, header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* width: 25%; */
-    /* height: 4%; */
-    /* background-image: url("/assets/img/1299198.svg"); */
-    /* background-size: cover; */
-    /* background-color: red; */
-    /* animation: mover 3s ease infinite alternate; */
-    /* animation: miAnimacionSvg 2s ease 3 alternate; */
 }
 
 .nav-titulo svg, .nav-titulo svg path {
@@ -109,7 +101,7 @@ main, header {
 }
 
 
-/* animación al logo */
+/* animación del logo para cumplir con lo solicitado */
 @keyframes miAnimacionSvg {
     0% {
         transform: translateX(0);
@@ -184,6 +176,7 @@ header select {
     animation: sobreCard 4s ease infinite alternate;
 }
 
+/* otros efectos solo por diversión */
 @keyframes sobreCard {
     0% {
         background-color: white;
@@ -272,7 +265,8 @@ main button a {
 }
 
 
-/* elementos del Catalogo */
+/* elementos del Catalogo (sección secundaria) */
+/* animaciones agregadas por diversión */
 .catalogo:hover {
     animation: colorCatalogo 4s ease alternate;
 }
@@ -385,8 +379,7 @@ footer a{
 
 
 
-/* Modificaciones al layout: punto 1 de la documentación del desafío */
-/* modelo Tablet: desarrollo opcional (no calificado) */
+/* Modificaciones al layout: para cumplir con lo pedido */
 
 @media (min-width: 576px) {
     /* se modifica la clase mobile, para invisibilizar la hamburguesa del menú */
@@ -478,7 +471,7 @@ footer a{
         align-items: center;
     }
 
-    /* grid areas: punto 2 de la documentación */
+    /* grid areas para cumplir con la petición de cambios de vistas */
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -501,7 +494,7 @@ footer a{
 
 
 /* ------------------------------------------------------------------------ */
-/* modificaciones con media queries: punto 1 de la documentación */
+/* modificaciones con media queries para tener una tercera vista*/
 /* se modifico el valor de 576 a 992 porque se ha incluido la definición para Tablet */
 
 @media (min-width: 992px) {
