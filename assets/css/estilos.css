@@ -296,6 +296,7 @@ main button a {
 .catalogo div img {
     width: 50%;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .catalogo div img:hover {
