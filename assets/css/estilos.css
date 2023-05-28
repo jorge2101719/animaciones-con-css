@@ -22,7 +22,8 @@ header {
     padding: 1%;
     grid-area: header;
     /* background-color: lightblue; */
-    background-color: #027af9;
+    /* background-color: #027af9; */
+    background-color: hsla(212, 75%, 75%);
     display: flex; /* uso de flex para cumplir con la documentación */
     justify-content: center;
     align-items: center;
@@ -70,7 +71,8 @@ form {
 
 footer {
     grid-area: pie;
-    background-color: midnightblue;
+    /* background-color: midnightblue; */
+    background-color: hsl(140, 5%, 15%);
     color: white;
     display: flex; /* uso de flex: para cumplir con la documentación */
     flex-direction: column;
@@ -183,15 +185,15 @@ header select {
     }
 
     25% {
-        background-color: yellowgreen;
+        background-color: hsl(240, 75%, 60%);
     }
 
     50% {
-        background-color: yellow;
+        background-color: hsl(92 66% 37%);
     }
 
     75% {
-        background-color: yellowgreen;
+        background-color: hsl(240, 75%, 60%);
     }
 
     100% {
@@ -277,15 +279,15 @@ main button a {
     }
 
     25% {
-        background-color: yellowgreen;
+        background-color: hsl(60, 80%, 70%);
     }
 
     50% {
-        background-color: yellow;
+        background-color: hsl(50, 80%, 50%);
     }
 
     75% {
-        background-color: yellowgreen;
+        background-color: hsl(60, 80%, 70%);
     }
 
     100% {
